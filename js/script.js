@@ -1,13 +1,4 @@
-let products = JSON.parse(localStorage.getItem('era_products')) || [
-    { id: 1, name: "Minimal Watch", price: 120, oldPrice: 150, img: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500", category: "accessories", color: "black", size: "M", rating: 4.8, discount: 20 },
-    { id: 2, name: "Era Sneakers", price: 85, oldPrice: 120, img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500", category: "clothing", color: "white", size: "L", rating: 4.6, discount: 29 },
-    { id: 3, name: "Classic Light Coat", price: 165, oldPrice: 220, img: "https://images.unsplash.com/photo-1539533057392-a7a3b816bae7?w=500", category: "clothing", color: "brown", size: "M", rating: 4.9, discount: 25 },
-    { id: 4, name: "Men's T-Shirt", price: 20, oldPrice: 35, img: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500", category: "clothing", color: "blue", size: "M", rating: 4.9, discount: 43 },
-    { id: 5, name: "Women's T-Shirt", price: 25, oldPrice: 40, img: "https://images.unsplash.com/photo-1574471618876-edb38f4ba727?w=500", category: "clothing", color: "black", size: "S", rating: 4.9, discount: 38 },
-    { id: 6, name: "Casual Shirt", price: 45, oldPrice: 65, img: "https://images.unsplash.com/photo-1617622417736-b91e48f42d8e?w=500", category: "clothing", color: "white", size: "L", rating: 4.9, discount: 31 },
-    { id: 7, name: "Denim Jacket", price: 95, oldPrice: 140, img: "https://images.unsplash.com/photo-1551028719-00167b16ebc5?w=500", category: "clothing", color: "blue", size: "M", rating: 4.8, discount: 32 },
-    { id: 8, name: "Green Sweater", price: 55, oldPrice: 75, img: "https://images.unsplash.com/photo-1556821552-5f1f4e10916b?w=500", category: "clothing", color: "brown", size: "L", rating: 4.9, discount: 27 }
-];
+let products = JSON.parse(localStorage.getItem('era_products')) || [];
 
 let activeFilters = {
     search: '',
