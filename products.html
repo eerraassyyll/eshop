@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERA | Каталог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo"><img style="width: auto;height: 50px;" src="img/logo.png" alt="ERA Logo"></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="products.html">Каталог</a></li>
+            </ul>
+            <div class="cart-btn" id="open-cart">Корзина (<span id="cart-count">0</span>)</div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="products-header">
+            <input type="text" id="search" class="search-bar" placeholder="Поиск товара...">
+            <select id="sort" class="sort-select">
+                <option value="newest">Новые</option>
+                <option value="price-asc">Цена: дешевле</option>
+                <option value="price-desc">Цена: дороже</option>
+                <option value="rating">По рейтингу</option>
+            </select>
+        </div>
+
+        <div class="active-filters" id="active-filters"></div>
+
+        <div class="products-wrapper">
+            <aside class="filters">
+                <div class="filter-section">
+                    <h3>Категория</h3>
+                    <div class="filter-option">
+                        <input type="checkbox" id="cat-accessories" value="accessories" class="category-filter">
+                        <label for="cat-accessories">Аксессуары</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="cat-clothing" value="clothing" class="category-filter">
+                        <label for="cat-clothing">Одежда</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Цена</h3>
+                    <div class="price-inputs">
+                        <input type="number" id="price-min" placeholder="От" min="0">
+                        <input type="number" id="price-max" placeholder="До" min="0">
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Цвет</h3>
+                    <div class="filter-option">
+                        <input type="checkbox" id="color-black" value="black" class="color-filter">
+                        <label for="color-black">Черный</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="color-white" value="white" class="color-filter">
+                        <label for="color-white">Белый</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="color-brown" value="brown" class="color-filter">
+                        <label for="color-brown">Коричневый</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="color-blue" value="blue" class="color-filter">
+                        <label for="color-blue">Синий</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="color-blue" value="blue" class="color-filter">
+                        <label for="color-red
+                        ">Красный</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Размер</h3>
+                    <div class="filter-option">
+                        <input type="checkbox" id="size-s" value="S" class="size-filter">
+                        <label for="size-s">S</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="size-m" value="M" class="size-filter">
+                        <label for="size-m">M</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="size-l" value="L" class="size-filter">
+                        <label for="size-l">L</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="size-xl" value="XL" class="size-filter">
+                        <label for="size-xl">XL</label>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="main-content">
+                <section id="product-grid" class="grid"></section>
+                <div id="no-results" style="text-align: center; padding: 40px; color: #999;">
+                    Товары не найдены
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <h2>Ваша корзина</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">Итого: <span id="total-price">0</span> $</div>
+            <button class="btn" id="checkout-btn">Оформить заказ</button>
+            <button class="btn-close" id="close-cart">Закрыть</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

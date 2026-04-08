@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ERA | Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo"><img style="width: auto;height: 50px;" src="img/logo.png" alt="ERA Logo"></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Каталог</a></li>
+                <li><a href="admin.html">Админ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 style="margin:40px 0; text-align:center; font-size:32px;">Добавить товар</h1>
+            <form id="admin-form">
+                <input type="text" id="p-name" placeholder="Название товара" required>
+                <input type="number" id="p-price" placeholder="Цена" required step="0.01">
+                <input type="number" id="p-old-price" placeholder="Старая цена (опционально)" step="0.01">
+                <input type="text" id="p-img" placeholder="URL картинки (например: https://picsum.photos/200)">
+                <select id="p-category" required>
+                    <option value="">Выберите категорию</option>
+                    <option value="accessories">Аксессуары</option>
+                    <option value="clothing">Одежда</option>
+                </select>
+                <select id="p-color" required>
+                    <option value="">Выберите цвет</option>
+                    <option value="black">Черный</option>
+                    <option value="white">Белый</option>
+                    <option value="brown">Коричневый</option>
+                    <option value="blue">Синий</option>
+                </select>
+                <select id="p-size" required>
+                    <option value="">Выберите размер</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <input type="number" id="p-rating" placeholder="Рейтинг (1-5)" min="1" max="5" step="0.1" value="5.0">
+                <button type="submit" class="btn">Добавить товар</button>
+            </form>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
